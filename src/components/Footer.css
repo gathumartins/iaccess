@@ -1,0 +1,167 @@
+.speHead {
+    font-family: 'FFFTusj' !important;
+    font-stretch: normal;
+    font-size: 50px;
+}
+
+.myFooter {
+    background-image: url(../images/herobg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.myFooterIn {
+    padding-top: 50px;
+    min-height: 500px;
+    width: 100%;
+    background-image: linear-gradient(var(--iWhite) 20%, rgba(255, 255, 255, 0) 52%, var(--iBlack) 52%);
+}
+
+
+.footTopInn h4 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 29px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 0.97;
+    letter-spacing: normal;
+    text-align: center !important;
+    color: var(--iBlack);
+    text-transform: uppercase;
+}
+
+.socialBlocks {
+    min-height: 350px;
+}
+
+.socialInn {
+    min-height: 350px;
+    max-width: 330px;
+    padding-top: 50px;
+}
+
+.socialNav {
+    padding-inline-start: 0px !important;
+
+}
+
+.socialNav li {
+    list-style: none
+}
+
+.socialNav li a {
+    color: var(--iBlack);
+    font-size: 2em;
+}
+
+.socialNav li a:hover {
+    color: var(--iOrange);
+}
+
+.twitterB {
+    background-color: var(--iWhite);
+}
+
+.twitter-embed {
+    max-height: 350px;
+    overflow-y: scroll;
+}
+
+.socialNav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footBtm {
+    min-height: 150px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-color: var(--iBlack);
+}
+
+.socialLabels {
+    display: none;
+}
+
+.newsLetter {
+    width: 330px;
+    height: 49px;
+    padding-top: 11px;
+    background-color: var(--iBlack);
+    color: var(--iWhite);
+    text-transform: uppercase;
+}
+
+.footLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footLinks li {
+    list-style: none;
+}
+
+.footLinks li a {
+    font-family: 'Helvetica', sans-serif;
+    font-stretch: condensed;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--iOrange);
+}
+
+.current-page {
+    color: var(--iOrange);
+}
+
+.btn:hover,
+.btn:focus {
+    color: var(--iOrange);
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item>div {
+        display: none;
+    }
+
+    .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}

@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Helvetica', sans-serif;
+    src: url('../fonts/Helvetica-Compressed.woff') format('woff2'),
+        url('../fonts/Helvetica-Compressed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FFFTusj';
+    src: url('../fonts/FFFTusj-Bold.woff2') format('woff2'),
+        url('../fonts/FFFTusj-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+
+    /* Colors: */
+    --iGray: #F5F5F5;
+    --iWhite: #FFFFFF;
+    --iBlack: #171717;
+    --iPurple: #8D2788;
+    --iOrange: #FC720B;
+    --iYellow: #ECAC05;
+    --iGreen: #099343;
+    --iBlue: #043CA8;
+    /* fonts */
+    --iPrimary: 'Helvetica',
+        sans-serif;
+    --iSecondary: 'FFFTusj';
+}
+
+.layPad {
+    padding-top: 70px;
+}
+
+.pageBanInn {
+    min-height: 150px;
+    background-image: url('../images/herobg.png');
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: center;
+}
+
+.pageBanTop {
+    padding-top: 100px;
+    padding-bottom: 35px;
+}
+
+.pageBanTop h1 {
+    font-family: var(--iPrimary);
+    color: var(--iWhite);
+    font-size: 43px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 0.93;
+    letter-spacing: normal;
+    text-align: left;
+}
+
+.specHead {
+    font-family: var(--iSecondary);
+}
+
+@media only screen and (min-width: 768px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 94%;
+    }
+
+    .footMenuContainer {
+        max-width: 88% !important;
+    }
+}

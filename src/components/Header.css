@@ -1,0 +1,132 @@
+.myNav {
+    position: fixed;
+    min-width: 100vw;
+    top: 0;
+    z-index: 999;
+}
+
+.myHum {
+    cursor: pointer;
+    margin: 15px 0 10px 15px;
+    color: #fff !important;
+    font-size: 30px;
+    text-align: left;
+    position: absolute;
+    position: absolute;
+    padding: 0px;
+    left: 0;
+    top: 0;
+    z-index: 102;
+}
+
+.sNav {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: var(--iPurple) !important;
+    border-bottom: solid thin var(--iPurple);
+}
+
+.navLogo,
+.mobilelogo {
+    background-image: url(../../static/imgs/logo.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 40px;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    border-color: unset;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.offcanvas-start {
+    top: 0;
+}
+
+.offcanvas {
+    background-color: #8D2788;
+    max-width: 240px;
+}
+
+.offcanvas-body {
+    padding: 0px;
+}
+
+.myClose {
+    font-size: 35px !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.rightCont {
+    padding-left: 0px;
+    padding-top: 15px;
+}
+
+.rightCont li {
+    list-style: none;
+    font-size: 24px;
+}
+
+.rightCont li a {
+    color: #ecac05;
+}
+
+.miniMenu {
+    max-width: 200px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: space-between;
+    color: #40499e !important;
+}
+
+.miniMenu li {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.miniMenu li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #40499e !important;
+    text-decoration: none;
+}
+
+.miniMenu li a:hover {
+    color: #d31680 !important;
+}
+
+.logout {
+    cursor: pointer;
+}
+
+.mobilelogo {
+    height: 30px;
+}
+
+/*  media queries*/
+@media only screen and (max-width: 991px) {
+    .sNav {
+        background: #8D2788 !important;
+        border-bottom: solid thin #8D2788;
+        padding-top: 2px;
+        padding-bottom: 1px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .sNavInn {
+        justify-content: flex-end !important;
+    }
+}

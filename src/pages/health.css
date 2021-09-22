@@ -1,0 +1,7 @@
+.health {
+    background: var(--iBlack);
+}
+
+.health h1 {
+    color: var(--iGreen);
+}

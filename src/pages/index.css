@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+}
+
+.heroBanner {
+    background-color: var(--iPurple);
+}
+
+.heroBanInn {
+    min-height: 300px;
+    background-image: url('../images/herobg.png');
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: center;
+}
+
+.heroBanTop {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.heroBanTop img {
+    max-width: 45%;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+.heroBanTop h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 70px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 5.6px;
+    text-align: left;
+    color: var(--iWhite);
+    text-transform: uppercase;
+    position: relative;
+}
+
+.heroDes {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+    text-transform: initial;
+    position: absolute;
+}
+
+.heroSpec {
+    font-family: 'Helvetica',
+        sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+    text-transform: initial;
+    left: 45px;
+}
+
+.banSpan {
+    font-size: 80px;
+    color: var(--iYellow) !important;
+}
+
+.heroBanTwo>div {
+    text-align: right;
+    padding: 30px;
+    color: var(--iWhite);
+    z-index: 2;
+}
+
+.heroBanTwo p {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1em;
+    font-weight: thin;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: var(--iWhite);
+}
+
+.heroBanTwoInn {
+    position: relative;
+    min-height: 80px;
+}
+
+.heroLinks {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.heroBanTwo a {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1em;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-decoration: none;
+}
+
+.firstHero {
+    background-color: var(--iGreen);
+}
+
+.firstHero a {
+    color: var(--iYellow);
+}
+
+.secondHero {
+    background-color: var(--iOrange);
+}
+
+.secondHero a {
+    color: var(--iPurple);
+}
+
+.thirdHero {
+    background-color: var(--iBlue);
+}
+
+.thirdHero a {
+    color: var(--iOrange);
+}
+
+.heroBtm {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    z-index: 3;
+}
+
+.heroBtmCont h1 {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 102px;
+    font-style: normal;
+    line-height: 0.96;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iYellow);
+}
+
+.speHead {
+    font-family: 'FFFTusj' !important;
+    font-weight: bold;
+    font-stretch: normal;
+}
+
+.speH {
+    font-size: 102px;
+}
+
+.heroBtmCont p {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 26px;
+    font-weight: thin;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+}
