@@ -7,7 +7,7 @@
 }
 
 .heroBanInn {
-    min-height: 300px;
+    min-height: 700px;
     background-image: url('../images/herobg.png');
     background-repeat: repeat-x;
     background-size: cover;
@@ -24,14 +24,14 @@
 }
 
 .heroBanTop img {
-    max-width: 45%;
+    width: 45%;
     position: absolute;
     right: 0;
-    top: 5px;
+    bottom: -30%;
 }
 
 .heroBanTop h1 {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--iPrimary);
     font-size: 70px;
     font-weight: 900;
     font-stretch: condensed;
@@ -45,7 +45,8 @@
 }
 
 .heroDes {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--iPrimary);
+    width: 100%;
     font-size: 18px;
     font-weight: 500;
     font-stretch: condensed;
@@ -59,8 +60,7 @@
 }
 
 .heroSpec {
-    font-family: 'Helvetica',
-        sans-serif;
+    font-family: var(--iPrimary);
     font-size: 18px;
     font-weight: 500;
     font-stretch: condensed;
@@ -71,6 +71,12 @@
     color: var(--iWhite);
     text-transform: initial;
     left: 45px;
+}
+
+.banArrow {
+    position: absolute;
+    width: 25% !important;
+    top: 72px;
 }
 
 .banSpan {
@@ -86,7 +92,7 @@
 }
 
 .heroBanTwo p {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--iPrimary);
     font-size: 1em;
     font-weight: thin;
     font-stretch: condensed;
@@ -109,7 +115,7 @@
 }
 
 .heroBanTwo a {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--iPrimary);
     font-size: 1em;
     font-weight: 900;
     font-stretch: condensed;
@@ -117,6 +123,10 @@
     line-height: normal;
     letter-spacing: normal;
     text-decoration: none;
+}
+
+.arrowmargin {
+    margin-left: 10px;
 }
 
 .firstHero {
@@ -143,24 +153,31 @@
     color: var(--iOrange);
 }
 
+.specialPads {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
 .heroBtm {
-    padding-top: 80px;
-    padding-bottom: 80px;
     z-index: 3;
 }
 
-.heroBtmCont h1 {
-    font-family: 'Helvetica', sans-serif;
+.homeheads h1 {
+    font-family: var(--iPrimary);
     font-size: 102px;
     font-style: normal;
     line-height: 0.96;
     letter-spacing: normal;
     text-align: left;
+    text-transform: uppercase;
+}
+
+.heroBtmCont h1 {
     color: var(--iYellow);
 }
 
 .speHead {
-    font-family: 'FFFTusj' !important;
+    font-family: var(--iSecondary) !important;
     font-weight: bold;
     font-stretch: normal;
 }
@@ -170,7 +187,7 @@
 }
 
 .heroBtmCont p {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--iPrimary);
     font-size: 26px;
     font-weight: thin;
     font-stretch: condensed;
@@ -179,4 +196,384 @@
     letter-spacing: normal;
     text-align: left;
     color: var(--iWhite);
+}
+
+.headerNavs {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headerNavs P {
+    max-width: 320px;
+    font-family: var(--iPrimary);
+    color: var(--iWhite);
+    font-size: 16px;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.headerNavs a {
+    font-family: var(--iPrimary);
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-decoration: none;
+}
+
+.storyinfo a {
+    color: var(--iPurple);
+}
+
+.resourceinfo a {
+    color: var(--iYellow);
+}
+
+/* health */
+.healthInnCont h2 {
+    font-family: var(--iPrimary);
+    font-size: 35px;
+    font-weight: normal;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iBlack);
+
+}
+
+.healthHead {
+    color: var(--iGreen);
+}
+
+.finderBtns {
+    padding-inline-start: 0px;
+    -webkit-padding-start: 0px;
+}
+
+.finderBtns li {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.mybtn {
+    min-width: 100%;
+    padding: 15px;
+    font-family: var(--iPrimary);
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--iWhite);
+    background-color: var(--iBlack);
+    cursor: pointer;
+}
+
+.mybtn:hover {
+    color: var(--iOrange);
+}
+
+.healthinfo a {
+    font-family: var(--iPrimary);
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iYellow);
+    text-decoration: none;
+}
+
+/* stories */
+.storiesHead {
+    color: var(--iWhite)
+}
+
+.homeStories {
+    background-image: linear-gradient(var(--iOrange) 45%, var(--iWhite) 45%);
+}
+
+.storiesInn {
+    background-color: var(--iWhite);
+}
+
+.storiesInnTop {
+    padding: 30px 20px;
+    min-height: 220px;
+    background-color: var(--iWhite);
+}
+
+.storiesInnTop h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5em;
+    font-family: var(--iPrimary);
+    color: var(--iBlack);
+}
+
+.story {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.blackSquare {
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border-top: 6px solid var(--iBlack);
+    border-left: 6px solid var(--iBlack);
+    position: absolute;
+    top: -3px;
+    left: 9px;
+}
+
+.storiesInn img {
+    border: 6px solid var(--iBlack);
+    margin-bottom: 15px;
+}
+
+.storyLink {
+    font-family: var(--iPrimary);
+    font-size: 24px;
+    font-weight: 900;
+    text-decoration: none;
+    color: var(--iPurple);
+}
+
+/* resources */
+.homeResources {
+    background-image: linear-gradient(var(--iBlue) 70%, var(--iWhite) 30%);
+}
+
+.homeResource {
+    margin-bottom: 30px;
+}
+
+.resourceInn {
+    background-color: var(--iBlack);
+}
+
+.resourceInnTop {
+    padding: 60px 30px;
+}
+
+.resourceInnTop h3 {
+    font-family: var(--iPrimary);
+    font-size: 2.2em;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+}
+
+/* media  queries */
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .heroBanInn {
+        min-height: 600px;
+    }
+
+    .heroBanTop h1 {
+        font-size: 60px;
+    }
+
+    .banSpan {
+        font-size: 70px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1023px) {
+    .heroBanInn {
+        min-height: 500px;
+    }
+
+    .heroBanTop h1 {
+        font-size: 50px;
+    }
+
+    .banSpan {
+        font-size: 60px;
+    }
+
+    .heroBanTop img {
+        bottom: -18%;
+    }
+
+    .banArrow {
+        width: 40%;
+        top: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .heroBanInn {
+        min-height: 400px;
+    }
+
+    .heroBanTop h1 {
+        font-size: 30px;
+    }
+
+    .banSpan {
+        font-size: 40px;
+    }
+
+    .banArrow {
+        width: 32%;
+        top: 32px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 767px) {
+    .heroBanInn {
+        min-height: 300px;
+    }
+
+    .heroBanTop img {
+        width: 40%;
+        bottom: -8%;
+    }
+
+    .heroBanTop h1 {
+        font-size: 25px;
+    }
+
+    .speHead {
+        font-size: 30px;
+    }
+
+    .heroDes {
+        font-size: 12px;
+    }
+
+    .banArrow {
+        width: 20%;
+        top: 25px;
+    }
+
+    .homeheads h1 {
+        font-size: 55px;
+    }
+
+    .speH {
+        font-size: 60px;
+    }
+
+    .heroBanTwo>div {
+        padding: 30px 0px;
+    }
+
+    .heroBtmCont p {
+        font-size: 22px;
+    }
+
+    .newsLetter {
+        width: 280px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 424px) {
+    .heroBanInn {
+        min-height: 300px;
+    }
+
+    .heroBanTop img {
+        bottom: -3%;
+    }
+
+    .heroBanTop h1 {
+        font-size: 25px;
+    }
+
+    .speHead {
+        font-size: 30px;
+    }
+
+    .heroDes {
+        font-size: 12px;
+    }
+
+    .banArrow {
+        width: 20%;
+        top: 25px;
+    }
+
+    .homeheads h1 {
+        font-size: 55px;
+    }
+
+    .speH {
+        font-size: 60px;
+    }
+
+    .heroBanTwo>div {
+        padding: 30px 0px;
+    }
+
+    .heroBtmCont p {
+        font-size: 22px;
+    }
+
+    .newsLetter {
+        width: 280px;
+    }
+}
+
+@media only screen and (max-width: 374px) {
+    .heroBanTop img {
+        bottom: -4%;
+    }
+
+    .heroBanInn {
+        min-height: 250px;
+    }
+
+    .heroBanTop h1 {
+        font-size: 20px;
+    }
+
+    .speHead {
+        font-size: 23px;
+    }
+
+    .heroDes {
+        font-size: 10px;
+    }
+
+    .banArrow {
+        width: 20%;
+        top: 20px;
+    }
+
+    .homeheads h1 {
+        font-size: 50px;
+    }
+
+    .speH {
+        font-size: 54px;
+    }
+
+    .heroBanTwo>div {
+        padding: 30px 0px;
+    }
+
+    .heroBtmCont p {
+        font-size: 20px;
+    }
+
+    .newsLetter {
+        width: 280px;
+    }
 }

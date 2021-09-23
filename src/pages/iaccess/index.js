@@ -1,6 +1,6 @@
 import React from 'react';
-import Partners from '../components/Partners';
-import Layout from '../components/Layout';
+import Partners from '../../components/Partners';
+import Layout from '../../components/Layout';
 import './iaccess.css';
 
 function Iaccess() {

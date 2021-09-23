@@ -1,15 +1,15 @@
 import React from 'react';
-import Partners from '../components/Partners';
-import Layout from '../components/Layout';
-import './donate.css';
+import Partners from '../../components/Partners';
+import Layout from '../../components/Layout';
+import './involved.css';
 
-function Donate() {
+function GetInvolved() {
     return (
         <Layout>
-            <header className="pageBanner donate">
+            <header className="pageBanner involved">
                 <div className="pageBanInn">
                     <div className="container-fluid container-fluid-sm container-fluid-md container-lg pageBanTop">
-                        <h1>DONATE <span className="specHead">.</span></h1>
+                        <h1>GET INVOVLED <span className="specHead">!</span></h1>
                     </div>
                 </div>
             </header>
@@ -18,4 +18,4 @@ function Donate() {
     )
 }
 
-export default Donate;
+export default GetInvolved;

@@ -32,7 +32,7 @@ function Header() {
                     </div>
                     <ul className="rightCont">
                         <li className="rightmenu">
-                            <Link to="/"><IoMdHelpBuoy /></Link>
+                            <Link to="/help"><IoMdHelpBuoy /></Link>
                         </li>
                     </ul>
                 </div>

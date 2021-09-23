@@ -1,0 +1,16 @@
+.privacy {
+    background-color: var(--iPurple);
+}
+
+.privacy h1 {
+    color: var(--iYellow);
+    text-transform: uppercase;
+}
+
+.ptContainer {
+    padding-top: 80px;
+    background-image: linear-gradient(var(--iOrange) 45%, url('../../images/herobg.png'));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

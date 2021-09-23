@@ -1,0 +1,8 @@
+.terms {
+    background-color: var(--iPurple);
+}
+
+.terms h1 {
+    color: var(--iYellow);
+    text-transform: uppercase;
+}

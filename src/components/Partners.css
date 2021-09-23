@@ -33,6 +33,11 @@
     padding: 30px;
 }
 
+.card-img {
+    display: flex;
+    justify-content: center;
+}
+
 @media (max-width: 767px) {
     .carousel-item {
         padding: 15px;
@@ -51,6 +56,7 @@
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
     display: flex;
+    justify-content: space-between;
 }
 
 /* medium and up screens */

@@ -8,7 +8,7 @@
 .myHum {
     cursor: pointer;
     margin: 15px 0 10px 15px;
-    color: #fff !important;
+    color: var(--iWhite) !important;
     font-size: 30px;
     text-align: left;
     position: absolute;
@@ -50,7 +50,7 @@
 }
 
 .offcanvas {
-    background-color: #8D2788;
+    background-color: var(--iPurple);
     max-width: 240px;
 }
 
@@ -61,7 +61,7 @@
 .myClose {
     font-size: 35px !important;
     font-weight: bold !important;
-    color: #fff !important;
+    color: var(--iWhite) !important;
     cursor: pointer;
 }
 
@@ -80,7 +80,7 @@
 }
 
 .rightCont li a {
-    color: #ecac05;
+    color: var(--iYellow);
 }
 
 .miniMenu {
@@ -91,25 +91,7 @@
     color: #40499e !important;
 }
 
-.miniMenu li {
-    list-style: none;
-    margin-left: 10px;
-}
 
-.miniMenu li a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    color: #40499e !important;
-    text-decoration: none;
-}
-
-.miniMenu li a:hover {
-    color: #d31680 !important;
-}
-
-.logout {
-    cursor: pointer;
-}
 
 .mobilelogo {
     height: 30px;
@@ -118,8 +100,8 @@
 /*  media queries*/
 @media only screen and (max-width: 991px) {
     .sNav {
-        background: #8D2788 !important;
-        border-bottom: solid thin #8D2788;
+        background: var(--iPurple) !important;
+        border-bottom: solid thin var(--iPurple);
         padding-top: 2px;
         padding-bottom: 1px;
     }
