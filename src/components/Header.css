@@ -23,7 +23,10 @@
     padding-top: 0px !important;
     padding-bottom: 0px !important;
     background-color: var(--iPurple) !important;
-    border-bottom: solid thin var(--iPurple);
+    background-image: url('../images/herobg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .navLogo,
@@ -51,6 +54,10 @@
 
 .offcanvas {
     background-color: var(--iPurple);
+    background-image: url('../images/herobg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     max-width: 240px;
 }
 
@@ -100,8 +107,10 @@
 /*  media queries*/
 @media only screen and (max-width: 991px) {
     .sNav {
-        background: var(--iPurple) !important;
-        border-bottom: solid thin var(--iPurple);
+        background-color: var(--iPurple) !important;
+        background-image: url('../images/herobg.png');
+        background-repeat: no-repeat;
+        background-position: center;
         padding-top: 2px;
         padding-bottom: 1px;
     }

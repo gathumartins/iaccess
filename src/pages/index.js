@@ -1,13 +1,68 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 import { ImArrowRight } from 'react-icons/im';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Helmet } from 'react-helmet';
 import './index.css';
 import Partners from '../components/Partners';
+import StoriesTTop from '../components/StoriesTTop';
 
 const IndexPage = () => {
+  const resourceCats = useStaticQuery(graphql`
+    {
+      allWpCategory(
+          filter: {parentId: {eq: "dGVybTo4NQ=="}}
+          sort: {order: ASC, fields: id}
+        ) {
+          edges {
+            node {
+              id
+              name
+              slug
+            }
+          }
+        }
+      wp {
+        allSettings {
+          generalSettingsUrl
+        }
+      }
+    allWpPost(
+    filter: {categories: {nodes: {elemMatch: {name: {eq: "stories"}}}}}
+    limit: 3
+    sort: {fields: date, order: DESC}
+  ) {
+    edges {
+      node {
+        title
+        slug
+        uri
+        categories{
+          nodes{
+            name
+          }
+        }
+        featuredImage{
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+  }
+`)
+  const homeCats = resourceCats.allWpCategory.edges;
+  const siteLink = resourceCats.wp.allSettings.generalSettingsUrl;
+  let catImgLink = `${siteLink}/wp-content/uploads/2021/09/`;
+  const homeStories = resourceCats.allWpPost.edges;
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>iACCESS-Home</title>
+      </Helmet>
       <header className="heroBanner">
         <section className="heroBanInn">
           <div className="container-fluid container-fluid-sm container-fluid-md container-lg heroBanTop">
@@ -18,10 +73,7 @@ const IndexPage = () => {
               hub<span className="speHead banSpan">.</span><br />
               <span className="heroDes">Powered by NairoBits Trust</span>
             </h1>
-            <img src="imgs/heroimage.png"
-              srcSet="imgs/heroimage@2x.png 2x,
-             imgs/heroimage@3x.png 3x"
-              className="img-fluid" alt="Youth teens" />
+            <img src="imgs/heroimage.png" className="img-fluid" alt="Youth teens" />
           </div>
         </section>
         <section className="container-fluid">
@@ -91,47 +143,22 @@ const IndexPage = () => {
           <div className="row">
             <div className="col-12 mb-5">
               <div className="row">
-                <div className="col-6 homeheads">
+                <div className="col-12 col-md-6 homeheads">
                   <h1 className="storiesHead">STORIES<span className="ml-3 speHead speH">.</span></h1>
                 </div>
-                <div className="col-6 text-right headerNavs storyinfo">
-                  <p className="mx-5">Check out real life stories</p>
+                <div className="col-12 col-md-6 text-right headerNavs storyinfo">
+                  <p className="mx-md-5">Check out real life stories</p>
                   <a href="/stories">STORIES<span className="arrowmargin"><ImArrowRight /></span></a>
                 </div>
               </div>
             </div>
             <div className="col-12">
               <div className="row">
-                <div className="col-12 col-sm-12 col-md-4 story">
-                  <div className="blackSquare"></div>
-                  <div className="storiesInn">
-                    <div className="storiesInnTop mb-4">
-                      <h3>A mom abit too early ...</h3>
-                    </div>
-                    <img src="imgs/storyone.jpg" alt="Home stories images" className="img-fluid" />
-                    <a href="/" className="storyLink">Read more <span className="arrowmargin"><ImArrowRight /></span></a>
-                  </div>
-                </div>
-                <div className="col-12 col-sm-12 col-md-4 story">
-                  <div className="blackSquare"></div>
-                  <div className="storiesInn">
-                    <div className="storiesInnTop mb-4">
-                      <h3>A mom abit too early ...</h3>
-                    </div>
-                    <img src="imgs/storytwo.jpg" alt="Home stories images" className="img-fluid" />
-                    <a href="/" className="storyLink">Read more <span className="arrowmargin"><ImArrowRight /></span></a>
-                  </div>
-                </div>
-                <div className="col-12 col-sm-12 col-md-4 story">
-                  <div className="blackSquare"></div>
-                  <div className="storiesInn">
-                    <div className="storiesInnTop mb-4">
-                      <h3>A mom abit too early ...</h3>
-                    </div>
-                    <img src="imgs/storythree.jpg" alt="Home stories images" className="img-fluid" />
-                    <a href="/" className="storyLink">Read more <span className="arrowmargin"><ImArrowRight /></span></a>
-                  </div>
-                </div>
+                {homeStories?.map((homeStory, index) => {
+                  return (
+                    <StoriesTTop storytitle={homeStory.node.title} storyLink={`/stories${homeStory.node.uri}`} src={homeStory.node.featuredImage.node.sourceUrl} altText={homeStory.node.featuredImage.node.altText} key={index} />
+                  )
+                })}
               </div>
             </div>
           </div>
@@ -142,11 +169,11 @@ const IndexPage = () => {
           <div className="row">
             <div className="col-12">
               <div className="row">
-                <div className="col-6 homeheads mb-4">
+                <div className="col-12 col-md-6 homeheads mb-4">
                   <h1 className="storiesHead">RESOURCES<span className="ml-3 speHead speH">.</span></h1>
                 </div>
-                <div className="col-6 text-right resourceinfo headerNavs">
-                  <p className="mx-5">Access free webinars, Books & courses
+                <div className="col-12 col-md-6 text-right resourceinfo headerNavs">
+                  <p className="mx-md-5">Access free webinars, Books & courses
                     from the comfort of your device</p>
                   <a href="/resources">OUR RESOURCES <span className="arrowmargin"><ImArrowRight /></span></a>
                 </div>
@@ -154,33 +181,18 @@ const IndexPage = () => {
             </div>
             <div className="col-12">
               <div className="row">
-                <div className="col-12 col-sm-12 col-md-4 homeResource">
-                  <div className="resourceInn">
-                    <div className="resourceInnTop">
-                      <h3>LEARNING<br />
-                        MATERIALS</h3>
+                {homeCats?.map((homeCat, index) => {
+                  return (
+                    <div className="col-12 col-sm-12 col-md-4 homeResource" key={homeCat.node.id}>
+                      <div className="resourceInn">
+                        <div className="resourceInnTop">
+                          <h3>{homeCat.node.name}</h3>
+                        </div>
+                        <img src={`${catImgLink}${homeCat.node.slug}.jpg`} alt="learning materials" className="img-fluid" />
+                      </div>
                     </div>
-                    <img src="imgs/learning.jpg" alt="learning materials" className="img-fluid" />
-                  </div>
-                </div>
-                <div className="col-12 col-sm-12 col-md-4 homeResource">
-                  <div className="resourceInn">
-                    <div className="resourceInnTop">
-                      <h3>ANIMATIONS &<br />
-                        INFOGRAPHICS</h3>
-                    </div>
-                    <img src="imgs/infographics.jpg" alt="infographics and animations" className="img-fluid" />
-                  </div>
-                </div>
-                <div className="col-12 col-sm-12 col-md-4 homeResource">
-                  <div className="resourceInn">
-                    <div className="resourceInnTop">
-                      <h3>POLICY<br />
-                        DOCUMENTS</h3>
-                    </div>
-                    <img src="imgs/policies.jpg" alt="Policies documents" className="img-fluid" />
-                  </div>
-                </div>
+                  )
+                })}
               </div>
             </div>
           </div>

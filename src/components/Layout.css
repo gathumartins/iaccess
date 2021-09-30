@@ -28,9 +28,8 @@
     --iGreen: #099343;
     --iBlue: #043CA8;
     /* fonts */
-    --iPrimary: 'Helvetica',
-        sans-serif;
-    --iSecondary: 'FFFTusj';
+    --iPrimary: 'Helvetica'sans-serif !important;
+    --iSecondary: 'FFFTusj' !important;
 }
 
 .layPad {
@@ -78,5 +77,21 @@
 
     .footMenuContainer {
         max-width: 88% !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .pageBanTop h1 {
+        font-size: 35px;
+    }
+
+    .layPad {
+        background-color: var(--iPurple);
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .pageBanTop h1 {
+        font-size: 28px;
     }
 }

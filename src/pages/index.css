@@ -303,50 +303,7 @@
     background-image: linear-gradient(var(--iOrange) 45%, var(--iWhite) 45%);
 }
 
-.storiesInn {
-    background-color: var(--iWhite);
-}
-
-.storiesInnTop {
-    padding: 30px 20px;
-    min-height: 220px;
-    background-color: var(--iWhite);
-}
-
-.storiesInnTop h3 {
-    text-transform: uppercase;
-    font-weight: 900;
-    font-size: 2.5em;
-    font-family: var(--iPrimary);
-    color: var(--iBlack);
-}
-
-.story {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.blackSquare {
-    width: 70px;
-    height: 70px;
-    background-color: transparent;
-    border-top: 6px solid var(--iBlack);
-    border-left: 6px solid var(--iBlack);
-    position: absolute;
-    top: -3px;
-    left: 9px;
-}
-
-.storiesInn img {
-    border: 6px solid var(--iBlack);
-    margin-bottom: 15px;
-}
-
 .storyLink {
-    font-family: var(--iPrimary);
-    font-size: 24px;
-    font-weight: 900;
-    text-decoration: none;
     color: var(--iPurple);
 }
 
@@ -377,6 +334,7 @@
     letter-spacing: normal;
     text-align: left;
     color: var(--iWhite);
+    max-width: 300px;
 }
 
 /* media  queries */
@@ -403,6 +361,10 @@
         font-size: 50px;
     }
 
+    .homeheads h1 {
+        font-size: 90px;
+    }
+
     .banSpan {
         font-size: 60px;
     }
@@ -424,6 +386,10 @@
 
     .heroBanTop h1 {
         font-size: 30px;
+    }
+
+    .homeheads h1 {
+        font-size: 60px;
     }
 
     .banSpan {
@@ -464,7 +430,7 @@
     }
 
     .homeheads h1 {
-        font-size: 55px;
+        font-size: 40px;
     }
 
     .speH {
@@ -480,7 +446,7 @@
     }
 
     .newsLetter {
-        width: 280px;
+        width: 100%;
     }
 }
 
@@ -511,7 +477,7 @@
     }
 
     .homeheads h1 {
-        font-size: 55px;
+        font-size: 30px;
     }
 
     .speH {
@@ -558,7 +524,7 @@
     }
 
     .homeheads h1 {
-        font-size: 50px;
+        font-size: 25px;
     }
 
     .speH {

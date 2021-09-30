@@ -5,3 +5,108 @@
 .help h1 {
     text-transform: uppercase;
 }
+
+.helpcont {
+    background-color: var(--iBlack);
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+.helpcont a {
+    text-decoration: none;
+}
+
+.helpcont h2 {
+    color: var(--iWhite);
+    text-transform: uppercase;
+    font-family: var(--iPrimary);
+    font-size: 35px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    max-width: 440px;
+}
+
+.helpInTopL {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.support {
+    color: var(--iYellow);
+    font-size: 130px;
+    margin-right: 8%;
+}
+
+.helpInTopR {
+    display: flex;
+    align-items: center;
+}
+
+.callBtn {
+    width: 300px;
+    padding: 17px;
+    background-color: var(--iPurple);
+    color: var(--iWhite);
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.86;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.helpBtm {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.healthLink {
+    font-family: var(--iPrimary);
+    font-size: 30px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration: none;
+    color: var(--iGreen);
+}
+
+.myArr {
+    color: var(--iYellow);
+}
+
+.healthLink:hover {
+    color: var(--iYellow);
+}
+
+.speHead {
+    font-size: 35px;
+}
+
+.phoneForm {
+    max-width: 440px;
+}
+
+.myInput {
+    padding: 15px;
+    border-radius: 0;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--iPurple);
+    padding: 15px;
+    color: var(--iWhite);
+    text-transform: uppercase;
+    border-radius: 0;
+}

@@ -33,7 +33,7 @@ function Social() {
                             </div>
                         </div>
                         <div className="col-12 col-sm-12 col-md-4 col-lg-6 socialBlocks text-center">
-                            <div className="socialInn mx-auto">
+                            <div className="socialInn speSoc mx-auto">
                                 <div className="footTopInn mb-5 d-none d-sm-none d-md-block text-center">
                                     <h4>social media.</h4>
                                 </div>
@@ -47,7 +47,9 @@ function Social() {
 
                         </div>
                         <div className="col-12 col-sm-12 col-md-4 col-lg-3 socialBlocks twitterB">
-                            <iframe title="SRHR" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNairobitssrhr&tabs=timeline&width=310&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="350" scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            <div className="twitterInn">
+                                <iframe title="SRHR" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNairobitssrhr&tabs=timeline&width=310&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="350" scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                            </div>
                         </div>
                     </div>
                 </div>

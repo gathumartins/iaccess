@@ -22,7 +22,7 @@ function Partners() {
     }, [])
 
     return (
-        <div className="container text-center my-3">
+        <div className="container text-center my-3 partnersCont">
             <div className="row mx-auto my-auto justify-content-center partners">
                 <h1 className="mt-5">Our  partners <span className="speHead">.</span></h1>
                 <div id="recipeCarousel" className="carousel slide" data-bs-ride="carousel">

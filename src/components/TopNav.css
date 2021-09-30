@@ -13,7 +13,6 @@
 
 .navLinks>li {
     list-style: none;
-    position: relative;
     z-index: 2;
 }
 
@@ -21,7 +20,11 @@
     color: var(--iWhite);
 }
 
-.current-page:before {
+.topLinks {
+    position: relative;
+}
+
+.current-link:before {
     content: "";
     left: 0;
     position: absolute;
@@ -67,6 +70,10 @@
 }
 
 @media only screen and (max-width: 991px) {
+    .topLinks {
+        position: relative;
+    }
+
     .navLinks {
         padding-left: 0px !important;
     }
@@ -82,4 +89,16 @@
         position: static;
     }
 
+    .current-link:before,
+    .navLinks>li:hover> :before {
+        display: none
+    }
+
+    .navLinks>li:hover>a {
+        color: var(--iYellow);
+    }
+
+    .current-link {
+        color: var(--iYellow);
+    }
 }

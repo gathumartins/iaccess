@@ -1,5 +1,5 @@
 .speHead {
-    font-family: 'FFFTusj' !important;
+    font-family: var(--iSecondary) !important;
     font-stretch: normal;
     font-size: 50px;
 }
@@ -13,9 +13,16 @@
 
 .myFooterIn {
     padding-top: 50px;
-    min-height: 500px;
+    min-height: 100px;
     width: 100%;
-    background-image: linear-gradient(var(--iWhite) 20%, rgba(255, 255, 255, 0) 52%, var(--iBlack) 52%);
+    background-image: linear-gradient(var(--iWhite) 25%, rgba(255, 255, 255, 0) 53%, var(--iBlack) 53%);
+}
+
+.speFoot {
+    padding-top: 50px;
+    min-height: 100px;
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0) 25%, var(--iBlack) 25%);
 }
 
 .footLinks {
@@ -29,7 +36,20 @@
 }
 
 .footLinks li a {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--iPrimary);
+    font-stretch: condensed;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+}
+
+.copyRight {
+    font-family: var(--iPrimary);
     font-stretch: condensed;
     text-transform: uppercase;
     font-size: 14px;
@@ -46,11 +66,30 @@
     color: var(--iOrange);
 }
 
-.current-page {
+.current-flink {
     color: var(--iOrange);
 }
 
 .btn:hover,
 .btn:focus {
     color: var(--iOrange);
+}
+
+@media only screen and (max-width: 575px) {
+    .footRow {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footLogo {
+        text-align: center !important;
+    }
+
+    .copyRight {
+        margin-top: 15px;
+    }
+
+    .footLogo {
+        margin-top: 30px;
+    }
 }

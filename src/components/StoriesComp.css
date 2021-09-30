@@ -1,0 +1,95 @@
+.storiesInn {
+    background-color: var(--iWhite);
+}
+
+.storiesInnTop {
+    padding: 30px 20px;
+    min-height: 200px;
+    background-color: var(--iWhite);
+}
+
+.storiesInnTop h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.2em;
+    font-family: var(--iPrimary);
+    color: var(--iBlack);
+}
+
+.story {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.blackSquare {
+    width: 70px;
+    height: 70px;
+    background-color: transparent;
+    border-top: 6px solid var(--iBlack);
+    border-left: 6px solid var(--iBlack);
+    position: absolute;
+    top: -3px;
+    left: 9px;
+}
+
+.storiesInn img {
+    border: 6px solid var(--iBlack);
+    margin-bottom: 15px;
+}
+
+.storyLink {
+    font-family: var(--iPrimary);
+    font-size: 18px;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .storiesInnTop {
+        min-height: 150px;
+    }
+
+    .storiesInnTop h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .storiesInnTop h3 {
+        font-size: 1em;
+    }
+
+    .storiesInnTop {
+        min-height: 130px;
+    }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+    .storiesInnTop {
+        min-height: 90px;
+    }
+
+    .storiesInnTop h3 {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 574px) {
+    .storiesInnTop {
+        min-height: 90px;
+    }
+
+    .storiesInnTop h3 {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .storiesInnTop {
+        min-height: 90px;
+    }
+
+    .storiesInnTop h3 {
+        font-size: 1em;
+    }
+}

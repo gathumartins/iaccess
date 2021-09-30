@@ -72,3 +72,33 @@
     color: var(--iWhite);
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: 767px) {
+    .socialInn {
+        max-width: 330px;
+        margin: auto;
+    }
+
+    .twitterInn,
+    .twitter-embed {
+        max-width: 320px;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .socialBlocks {
+        min-height: 150px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .socialInn {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .speSoc {
+        min-height: 200px;
+    }
+}

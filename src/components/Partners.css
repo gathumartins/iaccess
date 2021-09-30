@@ -1,3 +1,7 @@
+.partnersCont {
+    background-color: var(--iWhite);
+}
+
 .partners h1 {
     font-family: var(--iPrimary);
     font-size: 29px;

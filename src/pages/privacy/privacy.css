@@ -14,3 +14,28 @@
     background-size: cover;
     background-position: center;
 }
+
+.privCont {
+    margin: 0 auto;
+    background-color: var(--iWhite);
+    padding: 90px 20px 60px;
+}
+
+.privCont p {
+    font-family: var(--iPrimary);
+    text-align: justify;
+    font-size: 17px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--iBlack);
+}
+
+@media only screen and (min-width: 768px) {
+    .privCont {
+        max-width: 75%;
+    }
+
+}

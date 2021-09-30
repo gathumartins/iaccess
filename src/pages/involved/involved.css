@@ -5,3 +5,128 @@
 .involved h1 {
     color: var(--iYellow);
 }
+
+.involvedCont {
+    background-color: var(--iWhite);
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.involvedTitle h3 {
+    font-family: var(--iPrimary);
+    font-size: 15px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--iYellow);
+}
+
+.involvedTitle h2 {
+    font-family: var(--iPrimary);
+    font-size: 35px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--iBlack);
+}
+
+.leftInBg {
+    background: url('../../images/partnerbg.png');
+    background-size: 40% 100%;
+    background-position: center right;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.involvedinnLeft {
+    background-image: linear-gradient(to right, var(--iBlack) 60%, rgba(255, 255, 255, 0) 61%);
+    background-size: 100%;
+}
+
+.involvedInn {
+    height: 300px;
+    padding: 8% 5%;
+    flex-direction: column;
+}
+
+.rightInBg {
+    background: url('../../images/volunteerbg.png');
+    background-size: 40% 100%;
+    background-position: center right;
+    object-fit: fit;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+
+.involvedInnRight {
+    background-image: linear-gradient(to right, var(--iBlue) 60%, rgba(255, 255, 255, 0) 61%);
+    background-size: 100%;
+}
+
+.invCont {
+    max-width: 50%;
+}
+
+.involvedInn a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--iWhite);
+}
+
+.involvedInn a:hover {
+    color: var(--iOrange);
+}
+
+.involvedInn h2 {
+    font-family: var(--iPrimary);
+    font-size: 33px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 0.93;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--iWhite);
+}
+
+.involvedinnLeft h2 {
+    color: var(--iYellow);
+}
+
+.involvedInn h6 {
+    font-family: var(--iPrimary);
+    font-size: 18px;
+    font-weight: 900;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--iPurple);
+}
+
+.involvedInnRight h6 {
+    color: var(--iYellow);
+}
+
+.involvedInn p {
+    font-family: var(--iPrimary);
+    font-size: 16px;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+    line-height: 1.4;
+}

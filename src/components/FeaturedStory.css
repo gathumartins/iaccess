@@ -1,0 +1,168 @@
+.featuredStory {
+    padding: 15px;
+}
+
+.featuredStories>div:first-child .bigStoryHeading {
+
+    font-size: 2.2em;
+}
+
+.largeStories {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.largeStoriesLeft {
+    width: 40%;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    z-index: 2;
+
+}
+
+.largeStoriesLeftInn {
+    min-width: 120%;
+    min-height: 150px;
+    position: absolute;
+    z-index: 3;
+}
+
+.largeStoriesLeftTop {
+    padding: 2%;
+}
+
+.largeStoriesLeftTop h5 {
+    text-transform: uppercase;
+    font-family: var(--iPrimary);
+    font-size: 0.8em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iBlack);
+}
+
+.largestoryTag {
+    color: var(--iBlack);
+}
+
+.largeStoriesLeftBtm {
+    min-height: 50px;
+    background-color: var(--iWhite);
+    position: relative;
+    padding: 20px;
+}
+
+.bigStoryBlackSq {
+    width: 60px;
+    height: 60px;
+    top: -3px;
+    left: -3px;
+    position: absolute;
+    background: transparent;
+    border-top: 6px solid var(--iBlack);
+    border-left: 6px solid var(--iBlack);
+}
+
+.bigStoryHeading {
+    text-transform: uppercase;
+    max-width: 85%;
+    font-family: var(--iPrimary);
+    font-size: 1em;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iBlack);
+}
+
+.largeStoriesRight {
+    width: 60%;
+    z-index: 1;
+}
+
+.featuredStoryImg {
+    border: 6px solid var(--iBlack);
+}
+
+.arrSmScreen {
+    display: none;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .featuredStories>div:first-child .bigStoryHeading {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+
+    .largeStoriesLeftTop h5 {
+        font-size: 0.7em;
+    }
+
+    .bigStoryHeading {
+        font-size: 1em;
+        max-width: 95%;
+    }
+
+    .storyLink {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 574px) {
+
+    .largeStoriesLeftTop h5 {
+        font-size: 0.5em;
+    }
+
+    .bigStoryHeading {
+        font-size: 0.7em;
+        max-width: 100%;
+    }
+
+    .storyLink {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+
+    .largeStories {
+        display: block;
+    }
+
+    .largeStoriesLeft {
+        width: 100%;
+        position: unset;
+
+    }
+
+    .largeStoriesRight {
+        width: 100%;
+        z-index: 1;
+    }
+
+    .largeStoriesLeftInn {
+        min-width: 100%;
+        position: unset;
+    }
+
+    .arrLgScreen {
+        display: none;
+    }
+
+    .arrSmScreen {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .storyLink {
+        font-size: 18px;
+    }
+}

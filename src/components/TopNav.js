@@ -22,7 +22,7 @@ function TopNav() {
                 menuItems?.map((menuItem, index) => {
                     return (
                         <li key={index}>
-                            <Link to={menuItem.path} className="nav-link" activeClassName="current-page">{menuItem.title}</Link>
+                            <Link to={menuItem.path} className="nav-link topLinks" activeClassName="current-link">{menuItem.title}</Link>
                         </li>
                     )
                 })

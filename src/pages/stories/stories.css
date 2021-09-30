@@ -1,3 +1,94 @@
 .stories {
     background-color: var(--iOrange);
 }
+
+.TopStories {
+    padding-bottom: 15px;
+    background-image: linear-gradient(var(--iWhite) 60%, var(--iGray) 60%);
+}
+
+.featuredStories>div {
+    margin: 40px 0;
+}
+
+.featuredStories {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(autofit, minmax(300px, 2/auto));
+}
+
+.featuredStories>div:first-child {
+    grid-column: span 2 / auto;
+}
+
+.bottomStories {
+    padding-top: 90px;
+    padding-bottom: 35px;
+}
+
+.storyLink {
+    color: var(--iOrange);
+}
+
+.storiesBtm {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    background-color: var(--iBlue);
+}
+
+.storiesContact p {
+    font-family: var(--iPrimary);
+    font-size: 21px;
+    font-weight: 400;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--iWhite);
+}
+
+.sbtLink {
+    font-family: var(--iPrimary);
+    font-size: 21px;
+    font-weight: 400;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.9;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--iWhite);
+    text-decoration: none;
+}
+
+.sbtLink:hover {
+    color: var(--iOrange);
+}
+
+.storiesContact img {
+    max-width: 35px;
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+    .featuredStories {
+        grid-template-columns: 1fr;
+    }
+
+    .featuredStories>div:first-child {
+        grid-column: auto;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .TopStories {
+        padding-top: 35px;
+    }
+
+    .featuredStories>div {
+        margin: 0;
+    }
+}

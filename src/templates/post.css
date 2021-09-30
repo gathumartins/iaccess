@@ -1,0 +1,54 @@
+.largestoryTag {
+    color: var(--iOrange);
+}
+
+.postPage {
+    background-color: var(--iWhite);
+    padding: 80px 0px;
+}
+
+.postPageCont {
+    position: relative;
+    border-bottom: 2px solid rgba(141, 39, 136, 0.08);
+}
+
+.featPostPage {
+    position: absolute;
+    right: -15%;
+}
+
+.postContentCont {
+    max-width: 768px;
+    margin: 100px auto 50px;
+    padding: 15px;
+}
+
+
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .postPageCont>div:first-child .bigStoryHeading {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (min-width: 575px) and (max-width: 767px) {
+    .largeStoriesLeftTop h5 {
+        font-size: 0.7em;
+    }
+
+    .featuredStories>div:first-child .bigStoryHeading {
+        font-size: 1em;
+        max-width: 95%;
+    }
+}
+
+@media only screen and (min-width: 425px) and (max-width: 574px) {
+    .largeStoriesLeftTop h5 {
+        font-size: 0.5em;
+    }
+
+    .featuredStories>div:first-child .bigStoryHeading {
+        font-size: 0.7em;
+        max-width: 100%;
+    }
+}
