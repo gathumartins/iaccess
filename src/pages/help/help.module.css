@@ -21,7 +21,7 @@
     text-transform: uppercase;
     font-family: var(--iPrimary);
     font-size: 35px;
-    font-weight: 900;
+    font-weight: 400;
     font-stretch: condensed;
     font-style: normal;
     line-height: 1.2;
@@ -71,7 +71,7 @@
 .healthLink {
     font-family: var(--iPrimary);
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 400;
     font-stretch: condensed;
     font-style: normal;
     line-height: normal;
@@ -102,11 +102,29 @@
     border-radius: 0;
 }
 
-.btn-submit {
+.btnSubmit {
     width: 100%;
     background-color: var(--iPurple);
     padding: 15px;
     color: var(--iWhite);
     text-transform: uppercase;
     border-radius: 0;
+}
+
+@media (max-width: 767px) {
+    .callBtn {
+        width: 100%;
+    }
+
+    .phoneForm {
+        min-width: 100%;
+    }
+
+    .helpInTopR {
+        justify-content: flex-start;
+    }
+
+    .phoneForm {
+        margin: auto;
+    }
 }

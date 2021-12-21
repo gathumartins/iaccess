@@ -4,7 +4,7 @@ import StoriesTTop from '../../components/StoriesTTop';
 import { Helmet } from "react-helmet";
 import FeaturedStory from "../../components/FeaturedStory";
 import { useStaticQuery, graphql } from 'gatsby';
-import './stories.css';
+import * as stostyles from './stories.module.css';
 
 function Stories() {
   const stories = useStaticQuery(graphql`
@@ -19,12 +19,16 @@ function Stories() {
         title
         slug
         uri
-        featuredImage{
+        featuredImage {
           node {
             altText
-            sourceUrl
+            localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
+      }
+    }
       }
     }
   }
@@ -38,12 +42,16 @@ function Stories() {
         title
         slug
         uri
-        featuredImage {
-          node {
-            altText
-            sourceUrl
+      featuredImage {
+      node {
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
+      }
+    }
         date(formatString: "MM-DD-YYYY")
       }
     }
@@ -57,42 +65,43 @@ function Stories() {
     <Layout>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>iACCESS-Stories</title>
       </Helmet>
-      <header className="pageBanner stories">
+      <header className={`pageBanner ${stostyles.stories}`}>
         <div className="pageBanInn">
           <div className="container-fluid container-fluid-sm container-fluid-md container-lg pageBanTop">
             <h1>STORIES <span className="specHead">.</span></h1>
           </div>
         </div>
       </header>
-      <section className="TopStories">
+      <section className={stostyles.TopStories}>
         <div className="container-fluid container-lg">
-          <div className="featuredStories">
+          <div className={stostyles.featuredStories}>
             {featStories?.map((featStory, index) => {
               return (
-                <FeaturedStory storytitle={featStory.node.title} src={featStory.node.featuredImage.node.sourceUrl} altText={featStory.node.featuredImage.node.altText} storyLink={`/stories${featStory.node.uri}`} date={featStory.node.date} key={index} />
+                <FeaturedStory storytitle={featStory.node.title} src={featStory.node.featuredImage.node.localFile.childImageSharp.gatsbyImageData} altText={featStory.node.featuredImage.node.altText} storyLink={`/stories${featStory.node.uri}`} date={featStory.node.date} key={index} />
               )
             })}
           </div>
         </div>
       </section>
-      <section className="bottomStories">
+      <section className={stostyles.bottomStories}>
         <div className="container-fluid container-lg">
           <div className="row">
             {storiesPage?.map((pageStory, index) => {
               return (
-                <StoriesTTop storytitle={pageStory.node.title} src={pageStory.node.featuredImage.node.sourceUrl} altText={pageStory.node.featuredImage.node.altText} storyLink={`/stories${pageStory.node.uri}`} key={index} />
+                <StoriesTTop storytitle={pageStory.node.title} src={pageStory.node.featuredImage.node.localFile.childImageSharp.gatsbyImageData} altText={pageStory.node.featuredImage.node.altText} storyLink={`/stories${pageStory.node.uri}`} key={index} />
               )
             })}
           </div>
         </div>
       </section>
-      <section className="storiesBtm">
+      <section className={stostyles.storiesBtm}>
         <div className="container-fluid container-lg">
           <div className="row">
-            <div className="col-12 storiesContact">
-              <p className="text-center"><img src="imgs/writer.png" alt="Typewriter icon" /> submit a story to  - <a href="mailto:iacess@nairobits.com" className="sbtLink">iacess@nairobits.com</a></p>
+            <div className={`col-12 ${stostyles.storiesContact}`}>
+              <p className="text-center"><img src="imgs/writer.png" alt="Typewriter icon" /> submit a story to  - <a href="mailto:iaccess@nairobits.com" className={stostyles.sbtLink}>iaccess@nairobits.com</a></p>
 
             </div>
           </div>

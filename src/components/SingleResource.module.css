@@ -1,0 +1,52 @@
+.resTitle {
+    min-height: 120px;
+    padding: 15px;
+    background-color: var(--iBlack);
+}
+
+.resSmallTitle {
+    background-color: var(--iBlack);
+    min-height: 120px;
+    padding: 30px 15px;
+}
+
+.resSmallTitle h1 {
+    font-family: var(--iPrimary);
+    font-size: 25px;
+    font-weight: 400;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iWhite);
+}
+
+.resCat h2 {
+    font-family: var(--iPrimary);
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    margin-bottom: 2px;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--iBlue);
+}
+
+.resDate h6 {
+    font-family: var(--iPrimary);
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    margin-bottom: 7px;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iBlack);
+}
+
+.featImg {
+    margin-bottom: 0px;
+}

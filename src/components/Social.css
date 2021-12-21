@@ -1,7 +1,7 @@
 .footTopInn h4 {
     font-family: 'Helvetica', sans-serif;
     font-size: 29px;
-    font-weight: 900;
+    font-weight: 700;
     font-stretch: condensed;
     font-style: normal;
     line-height: 0.97;
@@ -73,10 +73,25 @@
     text-transform: uppercase;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
+    .twitterB {
+        max-width: 330px;
+        margin: auto;
+    }
+
     .socialInn {
         max-width: 330px;
         margin: auto;
+    }
+
+    .speSoc {
+        min-height: 200px;
+    }
+
+    .speSocBlocks {
+        margin-top: 25px;
+        margin-bottom: 25px;
+        min-height: 150px;
     }
 
     .twitterInn,
@@ -84,6 +99,7 @@
         max-width: 320px;
         margin: auto;
     }
+
 }
 
 @media only screen and (max-width: 575px) {
@@ -99,6 +115,10 @@
     }
 
     .speSoc {
-        min-height: 200px;
+        min-height: 150px;
+    }
+
+    .newsLetter {
+        width: 300px;
     }
 }

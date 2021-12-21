@@ -1,0 +1,214 @@
+.popBody {
+    background-color: var(--iGray);
+    position: relative;
+}
+
+.popHeader {
+    border-bottom: none !important;
+    position: relative;
+    padding: 15px 0px;
+}
+
+.popHeadIn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popTitle {
+    flex-grow: grow;
+}
+
+.popTitle h1 {
+    font-family: var(--iPrimary);
+    font-size: 2.5em;
+    font-weight: 500;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.12;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iBlack);
+    text-transform: uppercase;
+}
+
+.downLink {
+    max-width: 200px;
+}
+
+.downLink a {
+    display: inline-flex;
+    text-decoration: none;
+    font-family: var(--iPrimary);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: condensed;
+    font-style: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    color: var(--iBlue);
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.downLink:hover>a {
+    color: var(--iOrange);
+}
+
+.modalClose {
+    font-size: 2.5em;
+    font-weight: 400;
+}
+
+.popFooter {
+    border-top: none !important;
+}
+
+.popInn {
+    width: 100%;
+    max-width: 1060px;
+}
+
+.popInnB {
+    padding: 15px;
+    min-height: 70vh;
+    background-color: var(--iWhite)
+}
+
+.popUpBOut {
+    position: relative;
+    padding: 15px 0px;
+}
+
+.popDoc {
+    max-width: 800px;
+    min-height: 100px;
+    background-color: var(--iPurple);
+    margin: 10px auto;
+}
+
+.shareIcons {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 50px;
+    min-height: 150px;
+    background: var(--iBlack);
+    padding: 10px 0px;
+}
+
+.shareTop {
+    background: var(--iWhite);
+    padding: 7px 5px;
+}
+
+.shareTop h6 {
+    font-family: var(--iPrimary);
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    margin-bottom: 0px;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--iBlac);
+}
+
+.shareBtns {
+    padding-inline-start: 0px;
+
+}
+
+.shareBtns li {
+    list-style: none;
+    margin: 14px;
+}
+
+.sLinks {
+    background: var(--iWhite);
+    font-size: 2em !important;
+    color: var(--iWhite) !important;
+}
+
+/* related resources */
+.relatedResHead {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--iBlack);
+}
+
+.relatedResHead h1 {
+    font-family: var(--iPrimary);
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--iBlue);
+}
+
+.relatedResHead a {
+    background-color: var(--iYellow);
+    padding: 18px;
+    font-family: var(--iPrimary);
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-decoration: none;
+    color: var(--iBlack);
+}
+
+.relatedResHead a:hover {
+    background-color: var(--iBlue);
+    color: var(--iWhite);
+}
+
+.relatedRes {
+    display: grid;
+    grid-template-columns: auto, auto, auto;
+}
+
+@media only screen and (max-width: 767px) {
+    .popHeader {
+        align-items: unset;
+
+    }
+
+    .popHeadIn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .modalClose {
+        font-size: 2em;
+    }
+
+    .popHeadIn>div {
+        min-width: 100%;
+    }
+
+    .downLink {
+        margin-top: 20px;
+        max-width: 100%;
+        float: right;
+        text-align: right;
+    }
+
+    .popTitle h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width: 574px) {
+    .relatedResHead h1 {
+        font-size: 25px;
+    }
+
+    .relatedResHead a {
+        padding: 15px 10px;
+        font-size: 13px;
+    }
+}

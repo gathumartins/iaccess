@@ -22,8 +22,7 @@ function FooterNav() {
             <div className="container-fluid container-lg footMenuContainer">
                 <div className="row footRow">
                     <div className="col-12 col-sm-3 col-md-2 footLogo">
-                        <img src="/imgs/logo.png" srcSet="/imgs/logo@2x.png 2x,
-             /imgs/logo@3x.png 3x" alt="i access footer logo" /><br />
+                        <img src="/imgs/logo.png" alt="i access footer logo" /><br />
                         <img src="/imgs/bitslogo.png" alt="Sponsored by Bits logo" srcSet="/imgs/bitslogo@2x.png 2x, /imgs/bitslogo@3x.png 3x" className="mt-3" />
                     </div>
                     <div className="col-12 col-sm-9 col-md-10">

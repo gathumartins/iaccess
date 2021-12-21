@@ -1,19 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'Helvetica', sans-serif;
-    src: url('../fonts/Helvetica-Compressed.woff') format('woff2'),
+    src: url('../fonts/Helvetica-Compressed.woff2') format('woff2'),
         url('../fonts/Helvetica-Compressed.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
     font-family: 'FFFTusj';
     src: url('../fonts/FFFTusj-Bold.woff2') format('woff2'),
         url('../fonts/FFFTusj-Bold.woff') format('woff');
-    font-weight: bold;
     font-style: normal;
-    font-display: swap;
 }
 
 :root {
@@ -53,7 +53,7 @@
     font-family: var(--iPrimary);
     color: var(--iWhite);
     font-size: 43px;
-    font-weight: 900;
+    font-weight: 700;
     font-stretch: condensed;
     font-style: normal;
     line-height: 0.93;
@@ -71,7 +71,8 @@
     .container,
     .container-lg,
     .container-md,
-    .container-sm {
+    .container-sm,
+    .featPostPage {
         max-width: 94%;
     }
 

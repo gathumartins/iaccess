@@ -165,4 +165,8 @@
     .storyLink {
         font-size: 18px;
     }
+
+    .largeStoriesLeftBtm {
+        min-height: 100px;
+    }
 }

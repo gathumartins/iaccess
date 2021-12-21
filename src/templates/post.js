@@ -2,25 +2,26 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import FeaturedStory from '../components/FeaturedStory';
-import './post.css'
+import './post.css';
 
 const Page = ({ data }) => {
-    const post = data.wpPost;
-    return (
-        <Layout>
-            <main className="layPad">
-                <section className="postPage">
-                    <div className="container-fluid container-lg postPageCont">
-                        <FeaturedStory storytitle={post.title} date={post.date} src={post.featuredImage.node.sourceUrl} altText={post.featuredImage.node.altText} className="featPostPage" />
-                        <div className="postContentCont">
-                            {post.content}
-                        </div>
-                    </div>
-                </section>
-            </main>
+  const post = data.wpPost;
+  return (
+    <Layout>
+      <main className="layPad">
+        <section className="postPage">
+          <div className="featPostPage" >
+            <FeaturedStory storytitle={post.title} date={post.date} src={post.featuredImage.node.localFile.childImageSharp.gatsbyImageData} altText={post.featuredImage.node.altText} />
+          </div>
+          <div className="container-fluid container-lg postPageCont">
+            <div className="postContentCont" dangerouslySetInnerHTML={{ __html: post.content }}>
+            </div>
+          </div>
+        </section>
+      </main>
 
-        </Layout>
-    )
+    </Layout>
+  )
 }
 
 export const query = graphql`
@@ -29,17 +30,12 @@ query($databaseId:Int!){
     content
     date(formatString: "MM-DD-YYYY")
     title
-    featuredImage {
+        featuredImage {
       node {
         altText
-        sourceUrl
-        author {
-          node {
-            avatar {
-              url
-            }
-            firstName
-            lastName
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
@@ -47,6 +43,5 @@ query($databaseId:Int!){
     databaseId
   }
 }`
-let specialPostHead = document.querySelector('.bigStoryHeading');
-console.log(specialPostHead);
+
 export default Page;

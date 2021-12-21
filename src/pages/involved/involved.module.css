@@ -15,7 +15,7 @@
 .involvedTitle h3 {
     font-family: var(--iPrimary);
     font-size: 15px;
-    font-weight: 900;
+    font-weight: 400;
     font-stretch: condensed;
     font-style: normal;
     line-height: 1.14;
@@ -28,7 +28,7 @@
 .involvedTitle h2 {
     font-family: var(--iPrimary);
     font-size: 35px;
-    font-weight: 900;
+    font-weight: 400;
     font-stretch: condensed;
     font-style: normal;
     line-height: 1.14;
@@ -87,11 +87,11 @@
 
 .involvedInn h2 {
     font-family: var(--iPrimary);
-    font-size: 33px;
-    font-weight: 900;
+    font-size: 35px;
+    font-weight: 700;
     font-stretch: condensed;
     font-style: normal;
-    line-height: 0.93;
+    line-height: 1.1;
     letter-spacing: normal;
     text-align: left;
     text-transform: uppercase;
@@ -105,7 +105,7 @@
 .involvedInn h6 {
     font-family: var(--iPrimary);
     font-size: 18px;
-    font-weight: 900;
+    font-weight: 400;
     font-stretch: condensed;
     font-style: normal;
     line-height: normal;

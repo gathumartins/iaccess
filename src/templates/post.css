@@ -1,20 +1,40 @@
-.largestoryTag {
-    color: var(--iOrange);
-}
-
 .postPage {
+    position: relative;
     background-color: var(--iWhite);
     padding: 80px 0px;
 }
 
 .postPageCont {
-    position: relative;
     border-bottom: 2px solid rgba(141, 39, 136, 0.08);
 }
 
 .featPostPage {
-    position: absolute;
-    right: -15%;
+    margin-left: 6%;
+
+}
+
+.featPostPage .largestoryTag {
+    color: var(--iOrange);
+}
+
+.featPostPage h5 {
+    font-size: 1.2em;
+}
+
+.featPostPage .bigStoryHeading {
+    font-size: 2.5em;
+}
+
+.featPostPage .largeStoriesLeftBtm {
+    min-height: 180px;
+}
+
+.featPostPage .storyLink {
+    display: none;
+}
+
+.featuredStory {
+    padding: 15px 0px;
 }
 
 .postContentCont {
@@ -26,29 +46,68 @@
 
 
 @media only screen and (min-width: 992px) and (max-width: 1024px) {
-    .postPageCont>div:first-child .bigStoryHeading {
-        font-size: 1.5em;
+    .featPostPage .bigStoryHeading {
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .featPostPage .bigStoryHeading {
+        font-size: 1.8em;
     }
 }
 
 @media only screen and (min-width: 575px) and (max-width: 767px) {
-    .largeStoriesLeftTop h5 {
-        font-size: 0.7em;
+    .featPostPage h5 {
+        font-size: 0.8em;
     }
 
-    .featuredStories>div:first-child .bigStoryHeading {
-        font-size: 1em;
+    .featPostPage .bigStoryHeading {
+        font-size: 1.4em;
         max-width: 95%;
     }
+
+    .postContentCont {
+        margin-top: 50px;
+    }
+
+
 }
 
 @media only screen and (min-width: 425px) and (max-width: 574px) {
-    .largeStoriesLeftTop h5 {
-        font-size: 0.5em;
+    .featPostPage h5 {
+        font-size: 0.7em;
     }
 
-    .featuredStories>div:first-child .bigStoryHeading {
-        font-size: 0.7em;
+    .featPostPage .bigStoryHeading {
+        font-size: 1em;
         max-width: 100%;
+    }
+
+    .featPostPage .largeStoriesLeftBtm {
+        min-height: 100px;
+    }
+
+    .postContentCont {
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    .featPostPage h5 {
+        font-size: 0.9em;
+    }
+
+    .featPostPage .bigStoryHeading {
+        font-size: 1.4em;
+        max-width: 100%;
+    }
+
+    .featPostPage .largeStoriesLeftBtm {
+        min-height: 100px;
+    }
+
+    .postContentCont {
+        margin-top: 50px;
     }
 }

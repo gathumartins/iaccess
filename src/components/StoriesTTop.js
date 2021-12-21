@@ -1,6 +1,7 @@
 import React from 'react';
 import { ImArrowRight } from 'react-icons/im';
 import { Link } from 'gatsby';
+import { GatsbyImage } from "gatsby-plugin-image";
 import './StoriesComp.css'
 
 function StoriesTTop({ storytitle, src, altText, storyLink }) {
@@ -11,7 +12,7 @@ function StoriesTTop({ storytitle, src, altText, storyLink }) {
                 <div className="storiesInnTop mb-4">
                     <h3>{storytitle}</h3>
                 </div>
-                <img src={src} alt={altText} className="img-fluid" />
+                <GatsbyImage image={src} alt={altText} className="img-fluid" />
                 <Link to={storyLink} className="storyLink">Read more <span className="arrowmargin"><ImArrowRight /></span></Link>
             </div>
         </div>

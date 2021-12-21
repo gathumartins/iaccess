@@ -3,13 +3,26 @@ import Layout from "../components/Layout";
 import { ImArrowRight } from 'react-icons/im';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import './index.css';
+import * as homestyles from './index.module.css';
 import Partners from '../components/Partners';
 import StoriesTTop from '../components/StoriesTTop';
 
 const IndexPage = () => {
   const resourceCats = useStaticQuery(graphql`
     {
+        categories:allWpCategory(
+            filter: {parent: {}, wpParent: {node: {name: {eq: "Resources"}}}}
+            limit: 3
+          ) {
+            nodes {
+              name
+              categoryImage {
+                catImage {
+                  mediaItemUrl
+                }
+              }
+            }
+          }
       allWpCategory(
           filter: {parentId: {eq: "dGVybTo4NQ=="}}
           sort: {order: ASC, fields: id}
@@ -42,17 +55,22 @@ const IndexPage = () => {
             name
           }
         }
-        featuredImage{
-          node {
-            altText
-            sourceUrl
+        featuredImage {
+        node {
+        altText
+        localFile {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
+      }
+    }
       }
     }
   }
   }
 `)
+  const resCats = resourceCats.categories.nodes;
   const homeCats = resourceCats.allWpCategory.edges;
   const siteLink = resourceCats.wp.allSettings.generalSettingsUrl;
   let catImgLink = `${siteLink}/wp-content/uploads/2021/09/`;
@@ -61,51 +79,52 @@ const IndexPage = () => {
     <Layout>
       <Helmet>
         <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>iACCESS-Home</title>
       </Helmet>
-      <header className="heroBanner">
-        <section className="heroBanInn">
-          <div className="container-fluid container-fluid-sm container-fluid-md container-lg heroBanTop">
+      <header className={homestyles.heroBanner}>
+        <section className={homestyles.heroBanInn}>
+          <div className={`container-fluid container-fluid-sm container-fluid-md container-lg ${homestyles.heroBanTop}`}>
             <h1>Welcome to<br />
-              the <span className="speHead banSpan">SRHR</span><img src="imgs/banarrow.svg" className="banArrow" alt="srhr pointer" /><span className="heroDes">"Sexual Reproductive health"</span><br />
+              the <span className={`${homestyles.speHead} ${homestyles.banSpan}`}>SRHR</span><img src="imgs/banarrow.svg" className={homestyles.banArrow} alt="srhr pointer" /><span className={homestyles.heroDes}>"Sexual Reproductive Health Rights"</span><br />
               Knowledge<br />
               Resource<br />
-              hub<span className="speHead banSpan">.</span><br />
-              <span className="heroDes">Powered by NairoBits Trust</span>
+              hub<span className={`${homestyles.speHead} ${homestyles.banSpan}`}>.</span><br />
+              <span className={homestyles.heroDes}>Powered by NairoBits Trust</span>
             </h1>
             <img src="imgs/heroimage.png" className="img-fluid" alt="Youth teens" />
           </div>
         </section>
         <section className="container-fluid">
-          <div className="row heroBanTwo">
-            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 firstHero">
-              <div className="container-fluid container-lg d-flex flex-column align-items-stretch heroBanTwoInn">
+          <div className={`row ${homestyles.heroBanTwo}`}>
+            <div className={`col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ${homestyles.firstHero}`}>
+              <div className={`container-fluid container-lg d-flex flex-column align-items-stretch ${homestyles.heroBanTwoInn}`}>
                 <p>Find a health service provider</p>
-                <Link to="/health" className="heroLinks">HEALTH FINDER <span className="arrowmargin"><ImArrowRight /></span></Link>
+                <Link to="/health" className={homestyles.heroLinks}>HEALTH FINDER <span className={homestyles.arrowmargin}><ImArrowRight /></span></Link>
               </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 secondHero">
-              <div className="container-fluid container-lg d-flex flex-column align-items-stretch heroBanTwoInn">
+            <div className={`col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ${homestyles.secondHero}`}>
+              <div className={`container-fluid container-lg d-flex flex-column align-items-stretch ${homestyles.heroBanTwoInn}`}>
                 <p>Check out real life stories</p>
-                <Link to="/stories" className="heroLinks">STORIES <span className="arrowmargin"><ImArrowRight /></span></Link>
+                <Link to="/stories" className={homestyles.heroLinks}>STORIES <span className={homestyles.arrowmargin}><ImArrowRight /></span></Link>
               </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 thirdHero">
-              <div className="container-fluid container-lg d-flex flex-column align-items-stretch heroBanTwoInn">
+            <div className={`col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 ${homestyles.thirdHero}`}>
+              <div className={`container-fluid container-lg d-flex flex-column align-items-stretch ${homestyles.heroBanTwoInn}`}>
                 <p>Access free webinars, Books & courses<br />
                   from the comfort of your device</p>
-                <Link to="/resources" className="heroLinks">RESOURCES <span className="arrowmargin"><ImArrowRight /></span></Link>
+                <Link to="/resources" className={homestyles.heroLinks}>RESOURCES <span className={homestyles.arrowmargin}><ImArrowRight /></span></Link>
               </div>
             </div>
           </div>
         </section>
-        <section className="heroBtm">
-          <div className="container-fluid container-lg specialPads heroBtmInn">
+        <section className={homestyles.heroBtm}>
+          <div className={`container-fluid container-lg ${homestyles.specialPads} heroBtmInn`}>
             <div className="row">
-              <div className="col-12 col-sm-8 col-md-7 col-lg-6 homeheads heroBtmCont">
-                <h1>ABOUT iACCESS <span className="ml-3 speHead speH">!</span></h1>
+              <div className={`col-12 col-sm-8 col-md-7 col-lg-6 ${homestyles.homeheads} ${homestyles.heroBtmCont}`}>
+                <h1>ABOUT iACCESS <span className={`ml-3 ${homestyles.speHead} ${homestyles.speH}`}>!</span></h1>
               </div>
-              <div className="col-12 col-sm-4 col-md-5 col-lg-6 heroBtmCont">
+              <div className={`col-12 col-sm-4 col-md-5 col-lg-6 ${homestyles.heroBtmCont}`}>
                 <p>The iACCESS Hub is a one-stop interactive website platform that contains policies, events, youth-friendly centers referral services, and Adolescent and Youth Sexual Reproductive Health (AYSRHR) resources, from gender and all-inclusive perspective.</p>
               </div>
             </div>
@@ -113,50 +132,47 @@ const IndexPage = () => {
         </section>
       </header>
       <section className="healthFinder">
-        <div className="container-fluid container-lg specialPads healthFinderInn">
+        <div className={`container-fluid container-lg ${homestyles.specialPads} healthFinderInn`}>
           <div className="row">
-            <div className="col-12 col-sm-8 col-md-6 homeheads healthInnCont">
+            <div className={`col-12 col-sm-8 col-md-6 ${homestyles.homeheads} ${homestyles.healthInnCont}`}>
 
-              <h1 className="healthHead">Find a
-                health
-                service
-                provider<span className="ml-3 speHead speH">.</span></h1>
+              <h1 className={homestyles.healthHead}>FIND A HEALTH SERVICE PROVIDER<span className={`ml-3 ${homestyles.speHead} ${homestyles.speH}`}>.</span></h1>
             </div>
 
-            <div className="col-12 col-sm-4 col-md-6 healthInnCont">
+            <div className={`col-12 col-sm-4 col-md-6 ${homestyles.healthInnCont}`}>
               <h2>What service do you want?</h2>
-              <ul className="row mt-5 finderBtns">
-                <li className="col-12 col-sm-6"><div href="/" className="mybtn">Counselling</div></li>
-                <li className="col-12 col-sm-6"><div href="/" className="mybtn">Testing</div></li>
-                <li className="col-12 col-sm-6"><div href="/" className="mybtn">I Just need help!</div></li>
+              <ul className={`row mt-5 ${homestyles.finderBtns}`}>
+                <li className="col-12 col-sm-6"><div href="/" className={homestyles.mybtn}>Counselling</div></li>
+                <li className="col-12 col-sm-6"><div href="/" className={homestyles.mybtn}>Testing</div></li>
+                <li className="col-12 col-sm-6"><div href="/" className={homestyles.mybtn}>I Just need help!</div></li>
               </ul>
 
-              <div className="mt-5 healthinfo">
-                <a href="/stories">HEALTH FINDER<span className="arrowmargin"><ImArrowRight /></span></a>
+              <div className={`mt-5 ${homestyles.healthinfo}`}>
+                <a href="/stories">HEALTH FINDER<span className={homestyles.arrowmargin}><ImArrowRight /></span></a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="homeStories">
-        <div className="container-fluid container-lg specialPads">
+      <section className={homestyles.homeStories}>
+        <div className={`container-fluid container-lg ${homestyles.specialPads}`}>
           <div className="row">
             <div className="col-12 mb-5">
               <div className="row">
-                <div className="col-12 col-md-6 homeheads">
-                  <h1 className="storiesHead">STORIES<span className="ml-3 speHead speH">.</span></h1>
+                <div className={`col-12 col-md-6 ${homestyles.homeheads}`}>
+                  <h1 className={homestyles.storiesHead}>STORIES<span className={`ml-3 ${homestyles.speHead} ${homestyles.speH}`}>.</span></h1>
                 </div>
-                <div className="col-12 col-md-6 text-right headerNavs storyinfo">
+                <div className={`col-12 col-md-6 text-right ${homestyles.headerNavs} ${homestyles.storyinfo}`}>
                   <p className="mx-md-5">Check out real life stories</p>
-                  <a href="/stories">STORIES<span className="arrowmargin"><ImArrowRight /></span></a>
+                  <a href="/stories">STORIES<span className={`${homestyles.arrowmargin} my-3`}><ImArrowRight /></span></a>
                 </div>
               </div>
             </div>
             <div className="col-12">
-              <div className="row">
+              <div className={`row ${homestyles.homeSHolder}`}>
                 {homeStories?.map((homeStory, index) => {
                   return (
-                    <StoriesTTop storytitle={homeStory.node.title} storyLink={`/stories${homeStory.node.uri}`} src={homeStory.node.featuredImage.node.sourceUrl} altText={homeStory.node.featuredImage.node.altText} key={index} />
+                    <StoriesTTop storytitle={homeStory.node.title} storyLink={`/stories${homeStory.node.uri}`} src={homeStory.node.featuredImage.node.localFile.childImageSharp.gatsbyImageData} altText={homeStory.node.featuredImage.node.altText} key={index} />
                   )
                 })}
               </div>
@@ -164,32 +180,32 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
-      <section className="homeResources">
-        <div className="container-fluid container-lg specialPads">
+      <section className={homestyles.homeResources}>
+        <div className={`container-fluid container-lg ${homestyles.specialPads}`}>
           <div className="row">
             <div className="col-12">
               <div className="row">
-                <div className="col-12 col-md-6 homeheads mb-4">
-                  <h1 className="storiesHead">RESOURCES<span className="ml-3 speHead speH">.</span></h1>
+                <div className={`col-12 col-md-6 ${homestyles.homeheads} mb-4`}>
+                  <h1 className={homestyles.storiesHead}>RESOURCES<span className={`ml-3 ${homestyles.speHead} ${homestyles.speH}`}>.</span></h1>
                 </div>
-                <div className="col-12 col-md-6 text-right resourceinfo headerNavs">
+                <div className={`col-12 col-md-6 text-right ${homestyles.resourceinfo} ${homestyles.headerNavs}`}>
                   <p className="mx-md-5">Access free webinars, Books & courses
                     from the comfort of your device</p>
-                  <a href="/resources">OUR RESOURCES <span className="arrowmargin"><ImArrowRight /></span></a>
+                  <a href="/resources">OUR RESOURCES <span className={homestyles.arrowmargin}><ImArrowRight /></span></a>
                 </div>
               </div>
             </div>
             <div className="col-12">
               <div className="row">
-                {homeCats?.map((homeCat, index) => {
+                {resCats?.map((resCat, index) => {
                   return (
-                    <div className="col-12 col-sm-12 col-md-4 homeResource" key={homeCat.node.id}>
-                      <div className="resourceInn">
-                        <div className="resourceInnTop">
-                          <h3>{homeCat.node.name}</h3>
+                    <div className={`col-12 col-sm-12 col-md-4 ${homestyles.homeResource}`} key={index}>
+                      <a href={``} className={homestyles.resourceInn}>
+                        <div className={homestyles.resourceInnTop}>
+                          <h3>{resCat.name}</h3>
                         </div>
-                        <img src={`${catImgLink}${homeCat.node.slug}.jpg`} alt="learning materials" className="img-fluid" />
-                      </div>
+                        <img src={resCat.categoryImage.catImage.mediaItemUrl} alt="learning materials" className="img-fluid" />
+                      </a>
                     </div>
                   )
                 })}

@@ -1,0 +1,119 @@
+.donate {
+    background-color: var(--iPurple);
+}
+
+.donate h1 {
+    color: var(--iYellow);
+}
+
+.donateCont {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.donateInnLeft {
+    max-width: 740px;
+}
+
+.donateInnLeft h6 {
+    font-family: var(--iPrimary);
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: var(--iYellow);
+}
+
+.donateInnLeft h1 {
+    font-family: var(--iPrimary);
+    text-align: left;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 0px;
+    color: var(--iBlack);
+    text-transform: uppercase;
+}
+
+.donateInnLeft p {
+    text-align: left;
+    font-family: var(--iPrimary);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    color: var(--iBlack);
+}
+
+.chequeDetails {
+    margin-top: 30px;
+    padding: 10px 0 25px 0;
+    border-top: 1px solid var(--iPurple);
+    border-bottom: 1px solid var(--iPurple);
+
+}
+
+.chequeDetails>.chequeInn:first-child {
+    border-bottom: 1px solid var(--iPurple);
+}
+
+.chequeInn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.chequeInn h6 {
+    margin-top: 15px;
+    min-width: 100%;
+    color: var(--iPurple);
+}
+
+.chequeInn p {
+    margin-bottom: 25px;
+    text-align: left;
+    font-family: var(--iPrimary);
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0px;
+    color: var(--iBlack);
+    padding-right: 15px;
+}
+
+.chequeInn *:nth-child(2) {
+    margin-right: 30px;
+}
+
+.chequeInn a {
+    color: var(--iBlack);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.chequeInn a:hover {
+    color: var(--iPurple);
+}
+
+/* pay widget */
+.payWidgetContOut {
+    position: relative;
+}
+
+.payWidgetCont {
+    min-width: 100%;
+    position: absolute;
+    margin-top: -95px;
+}
+
+/* media queries */
+@media only screen and (max-width: 767px) {
+
+    .payWidgetCont {
+        min-width: 100%;
+        position: unset;
+        margin-top: 40px;
+    }
+
+    .donateInnLeft h1 {
+        font-size: 1.8em;
+    }
+}

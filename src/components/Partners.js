@@ -31,7 +31,7 @@ function Partners() {
                             <div className="col-md-4">
                                 <div className="card">
                                     <div className="card-img">
-                                        <img src="./imgs/rutger.jpg" className="img-fluid" alt="Rutgers Logo" />
+                                        <img src="imgs/rutger.jpg" className="img-fluid" alt="Rutgers Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@ function Partners() {
                             <div className="col-md-4">
                                 <div className="card">
                                     <div className="card-img">
-                                        <img src="./imgs/srhr.jpg" className="img-fluid" alt="Srhr Logo" />
+                                        <img src="imgs/srhr.jpg" className="img-fluid" alt="Srhr Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ function Partners() {
                             <div className="col-md-4">
                                 <div className="card">
                                     <div className="card-img">
-                                        <img src="./imgs/ideo.jpg" className="img-fluid" alt="Ideo Logo" />
+                                        <img src="imgs/ideo.jpg" className="img-fluid" alt="Ideo Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@ function Partners() {
                             <div className="col-md-4">
                                 <div className="card">
                                     <div className="card-img">
-                                        <img src="./imgs/rutger.jpg" className="img-fluid" alt="Rutgers Logo" />
+                                        <img src="imgs/rutger.jpg" className="img-fluid" alt="Rutgers Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ function Partners() {
                             <div className="col-md-4">
                                 <div className="card">
                                     <div className="card-img">
-                                        <img src="./imgs/srhr.jpg" className="img-fluid" alt="Srhr Logo" />
+                                        <img src="imgs/srhr.jpg" className="img-fluid" alt="Srhr Logo" />
                                     </div>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@ function Partners() {
                             <div className="col-md-4">
                                 <div className="card">
                                     <div className="card-img">
-                                        <img src="./imgs/ideo.jpg" className="img-fluid" alt="Ideo Logo" />
+                                        <img src="imgs/ideo.jpg" className="img-fluid" alt="Ideo Logo" />
                                     </div>
                                 </div>
                             </div>

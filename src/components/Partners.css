@@ -5,7 +5,7 @@
 .partners h1 {
     font-family: var(--iPrimary);
     font-size: 29px;
-    font-weight: 900;
+    font-weight: 700;
     font-stretch: condensed;
     font-style: normal;
     line-height: 0.97;
@@ -42,42 +42,59 @@
     justify-content: center;
 }
 
-@media (max-width: 767px) {
-    .carousel-item {
-        padding: 15px;
-    }
-
-    .carousel-inner .carousel-item>div {
-        display: none;
-    }
-
-    .carousel-inner .carousel-item>div:first-child {
-        display: block;
-    }
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
-    justify-content: space-between;
+.carousel-control-next,
+.carousel-control-prev {
+    background: var(--iWhite) !important;
+    width: 7%;
 }
 
 /* medium and up screens */
-@media (min-width: 768px) {
+    @media only screen and (min-width: 768px) {
+        .carousel-inner {
+            width: 90%;
+            margin: auto;
+        }
 
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .carousel-inner .carousel-item-end.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(25%);
+        }
+
+        .carousel-inner .carousel-item-start.active,
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-25%);
+        }
     }
 
-    .carousel-inner .carousel-item-start.active,
-    .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
+    .carousel-inner .carousel-item-end,
+    .carousel-inner .carousel-item-start {
+        transform: translateX(0);
     }
-}
 
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start {
-    transform: translateX(0);
-}
+    @media only screen and (max-width: 767px) {
+        .carousel-item {
+            padding: 15px;
+        }
+
+        .carousel-inner .carousel-item>div {
+            display: none;
+        }
+
+        .carousel-inner .carousel-item>div:first-child {
+            display: block;
+        }
+
+        .carousel-inner .carousel-item.active,
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+            display: flex;
+            justify-content: space-around;
+        }
+    }

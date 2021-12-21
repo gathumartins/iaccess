@@ -1,6 +1,7 @@
 import React from 'react';
 import { ImArrowRight } from 'react-icons/im';
 import { Link } from 'gatsby';
+import { GatsbyImage } from "gatsby-plugin-image";
 import './FeaturedStory.css'
 
 function FeaturedStory({ storytitle, src, altText, storyLink, date }) {
@@ -20,7 +21,7 @@ function FeaturedStory({ storytitle, src, altText, storyLink, date }) {
                     </div>
                 </div>
                 <div className="largeStoriesRight">
-                    <img src={src} className="img-fluid featuredStoryImg" alt={altText} />
+                    <GatsbyImage image={src} className="img-fluid featuredStoryImg" alt={altText} />
                 </div>
                 <Link to={storyLink} className="storyLink arrSmScreen">Read more <span className="arrowmargin"><ImArrowRight /></span></Link>
             </div>

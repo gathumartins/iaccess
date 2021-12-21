@@ -10,7 +10,7 @@ function Social() {
     }, []);
     return (
         <Fragment>
-            <section className="footerTop d-block d-sm-block d-md-none">
+            <section className="footerTop d-block d-sm-block d-md-block d-lg-none mb-5">
                 <div className="footTopInn text-center">
                     <h4>social media.</h4>
                 </div>
@@ -18,7 +18,7 @@ function Social() {
             <section className="footMid">
                 <div className="container-fluid container-lg footMidInn">
                     <div className="row">
-                        <div className="col-12 col-sm-12 col-md-3 col-lg-3 socialBlocks twitterB">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-3 socialBlocks twitterB">
                             <div className="twitter-embed">
                                 <a
                                     className="twitter-timeline"
@@ -32,10 +32,10 @@ function Social() {
                                 </a>
                             </div>
                         </div>
-                        <div className="col-12 col-sm-12 col-md-4 col-lg-6 socialBlocks text-center">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-6 socialBlocks speSocBlocks text-center">
                             <div className="socialInn speSoc mx-auto">
-                                <div className="footTopInn mb-5 d-none d-sm-none d-md-block text-center">
-                                    <h4>social media.</h4>
+                                <div className="footTopInn mb-5 d-none d-sm-none d-md-none d-lg-block text-center">
+                                    <h4>social media <span className="speHead">.</span></h4>
                                 </div>
                                 <ul className="d-flex align-items-center socialNav">
                                     <li><a href="/" target="_blank"><FaFacebookSquare /><span className="socialLabels">Facebook</span></a></li>
@@ -46,7 +46,7 @@ function Social() {
                             </div>
 
                         </div>
-                        <div className="col-12 col-sm-12 col-md-4 col-lg-3 socialBlocks twitterB">
+                        <div className="col-12 col-sm-12 col-md-12 col-lg-3 socialBlocks twitterB">
                             <div className="twitterInn">
                                 <iframe title="SRHR" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FNairobitssrhr&tabs=timeline&width=310&height=350&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="350" scrolling="no" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                             </div>

@@ -1,0 +1,136 @@
+.health {
+    background: var(--iBlack);
+}
+
+.health h1 {
+    color: var(--iGreen);
+}
+
+.resourcesFilter {
+    display: grid;
+    gap: 1.5em;
+    grid-template-columns: auto auto auto auto;
+}
+
+.filCont {
+    margin-right: 15px;
+    font: normal normal bold 13px var(--iPrimary);
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.filCont:last-child {
+    margin-right: 0px;
+}
+
+.filterLabel {
+    color: var(--iBlack);
+}
+
+.filCont input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.resFilter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 49px;
+    background-color: var(--iGray);
+    z-index: 2;
+    transition: all;
+}
+
+.filterLabel {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    z-index: 3;
+    padding: 12px 10px;
+}
+
+.filCont:hover input~.resFilter,
+.filCont:hover>.filterLabel {
+    background-color: var(--iOrange);
+    color: var(--iWhite) !important;
+    transition: all 0.3s ease;
+}
+
+.filCont input:checked~.resFilter {
+    background-color: var(--iOrange);
+    color: var(--iWhite) !important;
+    transition: all 0.3s ease;
+}
+
+.selectCont {
+    display: flex;
+}
+
+.selectCont select {
+    position: relative;
+    cursor: pointer;
+    min-width: 100%;
+    height: 49px;
+    padding: 5px;
+}
+
+.selectCont select:focus~option {
+    box-shadow: none;
+}
+
+.filterSelect {
+    box-shadow: none;
+}
+
+.selectBtn {
+    background-color: var(--iGray);
+    height: 49px;
+    border-radius: 0px;
+}
+
+.specialL {
+    background-color: var(--iWhite);
+    width: 100%;
+    top: -1px;
+    padding: 0px;
+    border-radius: 0px;
+}
+
+.selectBtn:focus {
+    background-color: var(--iOrange);
+    color: var(--iWhite);
+    box-shadow: none;
+}
+
+.specialL li:hover>a {
+    background-color: var(--iOrange);
+    color: var(--iWhite);
+}
+
+@media only screen and (max-width: 991px) {
+    .resourcesFilter {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 574px) {
+    .resourcesFilter {
+        grid-template-columns: auto auto;
+    }
+
+    .filCont:nth-child(2) {
+        margin-right: 0px;
+    }
+}
