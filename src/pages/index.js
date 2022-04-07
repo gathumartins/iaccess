@@ -71,9 +71,6 @@ const IndexPage = () => {
   }
 `)
   const resCats = resourceCats.categories.nodes;
-  const homeCats = resourceCats.allWpCategory.edges;
-  const siteLink = resourceCats.wp.allSettings.generalSettingsUrl;
-  let catImgLink = `${siteLink}/wp-content/uploads/2021/09/`;
   const homeStories = resourceCats.allWpPost.edges;
   return (
     <Layout>
@@ -200,7 +197,7 @@ const IndexPage = () => {
                 {resCats?.map((resCat, index) => {
                   return (
                     <div className={`col-12 col-sm-12 col-md-4 ${homestyles.homeResource}`} key={index}>
-                      <a href={``} className={homestyles.resourceInn}>
+                      <a href={`/`} className={homestyles.resourceInn}>
                         <div className={homestyles.resourceInnTop}>
                           <h3>{resCat.name}</h3>
                         </div>
