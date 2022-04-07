@@ -4,37 +4,36 @@ import { ImArrowRight } from 'react-icons/im';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 import * as homestyles from './index.module.css';
+import { GatsbyImage } from "gatsby-plugin-image";
 import Partners from '../components/Partners';
 import StoriesTTop from '../components/StoriesTTop';
 
 const IndexPage = () => {
   const resourceCats = useStaticQuery(graphql`
     {
-        categories:allWpCategory(
-            filter: {parent: {}, wpParent: {node: {name: {eq: "Resources"}}}}
-            limit: 3
-          ) {
-            nodes {
-              name
-              categoryImage {
-                catImage {
-                  mediaItemUrl
-                }
+    allWpCategory(
+    filter: {parentId: {eq: "dGVybTo4NQ=="}}
+    sort: {order: ASC, fields: id}
+  ) {
+    edges {
+      node {
+        id
+        name
+        slug
+        categoryImage {
+          catLink
+          catImage {
+            localFile {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH)
               }
             }
-          }
-      allWpCategory(
-          filter: {parentId: {eq: "dGVybTo4NQ=="}}
-          sort: {order: ASC, fields: id}
-        ) {
-          edges {
-            node {
-              id
-              name
-              slug
-            }
+            altText
           }
         }
+      }
+    }
+  }
       wp {
         allSettings {
           generalSettingsUrl
@@ -70,7 +69,7 @@ const IndexPage = () => {
   }
   }
 `)
-  const resCats = resourceCats.categories.nodes;
+  const resCats = resourceCats.allWpCategory.edges;
   const homeStories = resourceCats.allWpPost.edges;
   return (
     <Layout>
@@ -196,12 +195,12 @@ const IndexPage = () => {
               <div className="row">
                 {resCats?.map((resCat, index) => {
                   return (
-                    <div className={`col-12 col-sm-12 col-md-4 ${homestyles.homeResource}`} key={index}>
-                      <a href={`/`} className={homestyles.resourceInn}>
+                  <div className={`col-12 col-sm-12 col-md-4 ${homestyles.homeResource}`} key={index}>
+                      <a href={resCat.node.catLink} className={homestyles.resourceInn}>
                         <div className={homestyles.resourceInnTop}>
-                          <h3>{resCat.name}</h3>
+                          <h3>{resCat.node.name}</h3>
                         </div>
-                        <img src={resCat.categoryImage.catImage.mediaItemUrl} alt="learning materials" className="img-fluid" />
+                        <GatsbyImage image={resCat.node.categoryImage.catImage.localFile.childImageSharp.gatsbyImageData} alt={resCat.node.categoryImage.catImage.altText} className="img-fluid" />
                       </a>
                     </div>
                   )
