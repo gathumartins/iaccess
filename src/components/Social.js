@@ -38,9 +38,9 @@ function Social() {
                                     <h4>social media <span className="speHead">.</span></h4>
                                 </div>
                                 <ul className="d-flex align-items-center socialNav">
-                                    <li><a href="/" target="_blank"><FaFacebookSquare /><span className="socialLabels">Facebook</span></a></li>
-                                    <li><a href="/" target="_blank"><FaTwitter /><span className="socialLabels">twitter</span></a></li>
-                                    <li><a href="/" target="_blank"><FaYoutube /><span className="socialLabels">youtube</span></a></li>
+                                    <li><a href="https://www.facebook.com/Nairobitssrhr" target="_blank" rel="noreferrer"><FaFacebookSquare /><span className="socialLabels">Facebook</span></a></li>
+                                    <li><a href="https://twitter.com/BitsSrhr" target="_blank" rel="noreferrer"><FaTwitter /><span className="socialLabels">twitter</span></a></li>
+                                    <li><a href="https://youtube.com/channel/UCHS3iDHMmIvhI8XrKlyykDg" target="_blank" rel="noreferrer"><FaYoutube /><span className="socialLabels">youtube</span></a></li>
                                 </ul>
                                 <div className="btn btn-large mt-3 newsLetter">subscribe to our newsletter</div>
                             </div>

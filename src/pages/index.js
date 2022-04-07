@@ -196,7 +196,7 @@ const IndexPage = () => {
                 {resCats?.map((resCat, index) => {
                   return (
                   <div className={`col-12 col-sm-12 col-md-4 ${homestyles.homeResource}`} key={index}>
-                      <a href={resCat.node.catLink} className={homestyles.resourceInn}>
+                      <a href={resCat.node.categoryImage.catLink} className={homestyles.resourceInn}>
                         <div className={homestyles.resourceInnTop}>
                           <h3>{resCat.node.name}</h3>
                         </div>
